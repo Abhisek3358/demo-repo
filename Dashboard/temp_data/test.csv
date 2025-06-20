@@ -1,0 +1,6 @@
+﻿Transaction_ID,Description,Amount,TaxCode,Label,Year,Month,day,TaxRate,EstimatedTax,Supplier_freq,category_encoded,taxcode_encoded,supplier_encoded
+1,Office Supplies expense from Bright Office,12985.54,GST5,Miscellaneous,2024,1,1,5,64927.7,0.015885881,5,5,2
+2,Consultation expense from TechGear Inc.,35740.85,CGST6,Consulting,2024,1,2,6,214445.1,0.017182688,0,0,4
+3,Office Supplies expense from Alpha Solutions,16465.03,CGST6,Miscellaneous,2024,1,2,6,98790.18,0.015399579,5,0,1
+4,Training expense from Unknown Supplier,66426.25,GST0,Training,2024,1,2,0,0,0.053331172,7,1,6
+5,Maintenance expense from MegaMart,78968.29,SGST6,Maintenance,2024,1,3,6,473809.74,0.015237478,3,7,0
