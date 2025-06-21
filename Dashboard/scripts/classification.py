@@ -1,16 +1,3 @@
-#!/usr/bin/env python
-# -*-coding:utf-8 -*-
-'''
-@File    :   classification.py
-@Time    :   2021/05/23 20:16:23
-@Author  :   Shanto Roy 
-@Version :   1.0
-@Contact :   sroy10@uh.edu
-@License :   (C)Copyright 2020-2021, Shanto Roy
-@Desc    :   None
-'''
-
-
 import pandas as pd
 import numpy as np
 # import matplotlib.pyplot as plt

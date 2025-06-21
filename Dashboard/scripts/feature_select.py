@@ -1,16 +1,3 @@
-#!/usr/bin/env python
-# -*-coding:utf-8 -*-
-'''
-@File    :   feature_select.py
-@Time    :   2021/05/23 14:46:37
-@Author  :   Shanto Roy 
-@Version :   1.0
-@Contact :   sroy10@uh.edu
-@License :   (C)Copyright 2020-2021, Shanto Roy
-@Desc    :   This Script helps to visualize importance of selected features
-'''
-
-
 import pandas as pd
 import streamlit as st
 from numpy import set_printoptions
@@ -85,7 +72,7 @@ def st_feature_selection():
         for col_name in feature_list:
             check_box = st.sidebar.checkbox(col_name)
             if check_box:
-                col_names.append(col_name)
+                col_names.append(col_namee)
     
 
     df = df[col_names]

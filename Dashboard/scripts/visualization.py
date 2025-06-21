@@ -1,16 +1,3 @@
-#!/usr/bin/env python
-# -*-coding:utf-8 -*-
-'''
-@File    :   visualization.py
-@Time    :   2021/05/16 18:12:14
-@Author  :   Shanto Roy 
-@Version :   1.0
-@Contact :   sroy10@uh.edu
-@License :   (C)Copyright 2020-2021, Shanto Roy
-@Desc    :   None
-'''
-
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -23,19 +10,30 @@ class one_feature:
     def __init__(self, df, x_col_name):
         self.df = df 
         self.x_col_name = x_col_name
+   
+   
+def bar_plot(self, top_n=20, x_title=None, y_title="Count", title="Bar Plot"):
+    value_counts = self.df[self.x_col_name].value_counts().nlargest(top_n)
+    key = value_counts.index.tolist()
+    val = value_counts.values.tolist()
 
-
-    def bar_plot(self):
-        #labels
-        key = self.df[self.x_col_name].value_counts().keys().tolist()
-        #values
-        val = self.df[self.x_col_name].value_counts().values.tolist()
-        trace = go.Bar(x = key, y=val,\
-                marker=dict(color=val,colorscale='Viridis',showscale=True),text = val)
-        data=[trace]
-        fig = go.Figure(data=data)
-        st.plotly_chart(fig)
-
+    trace = go.Bar(
+        x=key,
+        y=val,
+        marker=dict(color=val, colorscale='Viridis', showscale=True),
+        text=val
+    )
+    data = [trace]
+    fig = go.Figure(data=data)
+    fig.update_layout(
+        title=title,
+        xaxis_title=x_title or self.x_col_name,
+        yaxis_title=y_title,
+        xaxis_tickangle=-45,
+        margin=dict(l=40, r=40, t=60, b=120),
+        height=500 if len(key) < 20 else 700
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
     def pi_plot(self):
         #labels
